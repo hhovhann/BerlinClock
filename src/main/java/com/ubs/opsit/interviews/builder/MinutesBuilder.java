@@ -4,7 +4,6 @@ import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 
-import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 import static org.apache.commons.lang.SystemUtils.LINE_SEPARATOR;
 
 /**
@@ -17,29 +16,29 @@ public class MinutesBuilder implements UpperSegmentStrategy, LowerSegmentStrateg
     public String buildUpperSegment(String value) {
         String result = "";
         int lowerMinute = Integer.valueOf(value);
-        if (Math.floorDiv(lowerMinute, FIVE.value()) == ZERO.value()) {
+        if (Math.floorDiv(lowerMinute, 5) == 0) {
             result = "OOOOOOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == ONE.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 1) {
             result = "YOOOOOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == TWO.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 2) {
             result = "YYOOOOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == THREE.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 3) {
             result = "YYROOOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == FOUR.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 4) {
             result = "YYRYOOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == FIVE.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 5) {
             result = "YYRYYOOOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == SIX.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 6) {
             result = "YYRYYROOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == SEVEN.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 7) {
             result = "YYRYYRYOOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == EIGHT.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 8) {
             result = "YYRYYRYYOOO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == NINE.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 9) {
             result = "YYRYYRYYROO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == TEN.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 10) {
             result = "YYRYYRYYRYO";
-        } else if (Math.floorDiv(lowerMinute, FIVE.value()) == ELEVEN.value()) {
+        } else if (Math.floorDiv(lowerMinute, 5) == 11) {
             result = "YYRYYRYYRYY";
         }
         return result;
@@ -49,15 +48,15 @@ public class MinutesBuilder implements UpperSegmentStrategy, LowerSegmentStrateg
     public String buildLowerSegment(String value) {
         String result = "";
         int lowerMinute = Integer.valueOf(value);
-        if (Math.floorDiv(lowerMinute, ONE.value()) == ZERO.value())
+        if (Math.floorDiv(lowerMinute, 1) == 0)
             result = "OOOO";
-        else if (Math.floorDiv(lowerMinute, ONE.value()) == ONE.value())
+        else if (Math.floorDiv(lowerMinute, 1) == 1)
             result = "YOOO";
-        else if (Math.floorDiv(lowerMinute, ONE.value()) == TWO.value())
+        else if (Math.floorDiv(lowerMinute, 1) == 2)
             result = "YYOO";
-        else if (Math.floorDiv(lowerMinute, ONE.value()) == THREE.value())
+        else if (Math.floorDiv(lowerMinute, 1) == 3)
             result = "YYYO";
-        else if (Math.floorDiv(lowerMinute, ONE.value()) == FOUR.value())
+        else if (Math.floorDiv(lowerMinute, 1) == 4)
             result = "YYYY";
 
         return result;
@@ -66,7 +65,7 @@ public class MinutesBuilder implements UpperSegmentStrategy, LowerSegmentStrateg
     @Override
     public String buildFullSegment(String value) {
         int fullHour = Integer.valueOf(value);
-        int residue = Math.floorMod(fullHour, FIVE.value());
+        int residue = Math.floorMod(fullHour, 5);
 
         return buildUpperSegment(String.valueOf(fullHour - residue)) + LINE_SEPARATOR + buildLowerSegment(String.valueOf(residue));
     }

@@ -4,7 +4,6 @@ import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 
-import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 import static org.apache.commons.lang.SystemUtils.LINE_SEPARATOR;
 
 /**
@@ -18,15 +17,15 @@ public class HoursBuilder implements UpperSegmentStrategy, LowerSegmentStrategy,
     public String buildUpperSegment(String value) {
         String result = "";
         int first_segment = Integer.valueOf(value);
-        if (Math.floorDiv(first_segment, FIVE.value()) == ZERO.value())
+        if (Math.floorDiv(first_segment, 5) == 0)
             result = "OOOO";
-        else if (Math.floorDiv(first_segment, FIVE.value()) == ONE.value())
+        else if (Math.floorDiv(first_segment, 5) == 1)
             result = "ROOO";
-        else if (Math.floorDiv(first_segment, FIVE.value()) == TWO.value())
+        else if (Math.floorDiv(first_segment, 5) == 2)
             result = "RROO";
-        else if (Math.floorDiv(first_segment, FIVE.value()) == THREE.value())
+        else if (Math.floorDiv(first_segment, 5) == 3)
             result = "RRRO";
-        else if (Math.floorDiv(first_segment, FIVE.value()) == FOUR.value())
+        else if (Math.floorDiv(first_segment, 5) == 4)
             result = "RRRR";
 
         return result;
@@ -36,15 +35,15 @@ public class HoursBuilder implements UpperSegmentStrategy, LowerSegmentStrategy,
     public String buildLowerSegment(String value) {
         String result = "";
         int lowerHour = Integer.valueOf(value);
-        if (Math.floorDiv(lowerHour, ONE.value()) == ZERO.value())
+        if (Math.floorDiv(lowerHour, 1) == 0)
             result = "OOOO";
-        else if (Math.floorDiv(lowerHour, ONE.value()) == ONE.value())
+        else if (Math.floorDiv(lowerHour, 1) == 1)
             result = "ROOO";
-        else if (Math.floorDiv(lowerHour, ONE.value()) == TWO.value())
+        else if (Math.floorDiv(lowerHour, 1) == 2)
             result = "RROO";
-        else if (Math.floorDiv(lowerHour, ONE.value()) == THREE.value())
+        else if (Math.floorDiv(lowerHour, 1) == 3)
             result = "RRRO";
-        else if (Math.floorDiv(lowerHour, ONE.value()) == FOUR.value())
+        else if (Math.floorDiv(lowerHour, 1) == 4)
             result = "RRRR";
 
         return result;
@@ -53,7 +52,7 @@ public class HoursBuilder implements UpperSegmentStrategy, LowerSegmentStrategy,
     @Override
     public String buildFullSegment(String value) {
         int fullHour = Integer.valueOf(value);
-        int residue = Math.floorMod(fullHour, FIVE.value());
+        int residue = Math.floorMod(fullHour, 5);
 
         return buildUpperSegment(String.valueOf(fullHour - residue)) + LINE_SEPARATOR + buildLowerSegment(String.valueOf(residue));
     }
