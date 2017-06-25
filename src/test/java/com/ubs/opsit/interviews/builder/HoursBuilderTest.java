@@ -1,6 +1,5 @@
 package com.ubs.opsit.interviews.builder;
 
-import com.ubs.opsit.interviews.builder.HourBuilder;
 import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
@@ -10,16 +9,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 /**
- * HourBuilderTest
+ * HoursBuilderTest
  *
  * @author Hayk Hovhannisyan
  */
-public class HourBuilderTest {
+public class HoursBuilderTest {
      
 
-    private final UpperSegmentStrategy upperSegmentStrategy = new HourBuilder();
-    private final LowerSegmentStrategy lowerSegmentStrategy = new HourBuilder();
-    private final FullSegmentStrategy fullSegmentStrategy = new HourBuilder();
+    private final UpperSegmentStrategy upperSegmentStrategy = new HoursBuilder();
+    private final LowerSegmentStrategy lowerSegmentStrategy = new HoursBuilder();
+    private final FullSegmentStrategy fullSegmentStrategy = new HoursBuilder();
 
     @Test
     public void testBuildUpperSegment() throws Exception {

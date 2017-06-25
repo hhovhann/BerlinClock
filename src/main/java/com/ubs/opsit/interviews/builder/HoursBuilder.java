@@ -7,11 +7,11 @@ import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 
 /**
- * HourBuilder
+ * HoursBuilder
  *
  * @author Hayk Hovhannisyan
  */
-public class HourBuilder implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
+public class HoursBuilder implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
 
     @Override
     public String buildUpperSegment(String value) {

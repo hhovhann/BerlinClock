@@ -9,15 +9,15 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 /**
- * MinuteBuilderTest
+ * MinutesBuilderTest
  *
  * @author Hayk Hovhannisyan
  */
-public class MinuteBuilderTest {
+public class MinutesBuilderTest {
 
-    private final UpperSegmentStrategy upperSegmentStrategy = new MinuteBuilder();
-    private final LowerSegmentStrategy lowerSegmentStrategy = new MinuteBuilder();
-    private final FullSegmentStrategy minuteFullStrategy = new MinuteBuilder();
+    private final UpperSegmentStrategy upperSegmentStrategy = new MinutesBuilder();
+    private final LowerSegmentStrategy lowerSegmentStrategy = new MinutesBuilder();
+    private final FullSegmentStrategy minuteFullStrategy = new MinutesBuilder();
 
     @Test
     public void testBuildUpperSegment() throws Exception {

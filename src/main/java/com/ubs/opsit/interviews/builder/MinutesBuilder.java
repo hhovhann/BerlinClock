@@ -7,11 +7,11 @@ import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 
 /**
- * MinuteBuilder
+ * MinutesBuilder
  *
  * @author Hayk Hovhannisyan
  */
-public class MinuteBuilder implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
+public class MinutesBuilder implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
     @Override
     public String buildUpperSegment(String value) {
         String result = "";
