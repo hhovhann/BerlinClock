@@ -14,7 +14,6 @@ import static org.junit.Assert.assertNotEquals;
  * @author Hayk Hovhannisyan
  */
 public class HoursBuilderTest {
-     
 
     private final UpperSegmentStrategy upperSegmentStrategy = new HoursBuilder();
     private final LowerSegmentStrategy lowerSegmentStrategy = new HoursBuilder();
