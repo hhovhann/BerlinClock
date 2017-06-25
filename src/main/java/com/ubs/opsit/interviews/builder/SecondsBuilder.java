@@ -1,14 +1,16 @@
-package com.ubs.opsit.interviews.strategy;
+package com.ubs.opsit.interviews.builder;
+
+import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
 
 import static com.ubs.opsit.interviews.utils.NUMBERS.ZERO;
 import static com.ubs.opsit.interviews.utils.NUMBERS.TWO;
 
 /**
- * FullSegmentStrategy
+ * SecondsBuilder
  *
  * @author Hayk Hovhannisyan
  */
-public class SecondsStrategy implements FullSegmentStrategy {
+public class SecondsBuilder implements FullSegmentStrategy {
 
     @Override
     public String buildFullSegment(String value) {

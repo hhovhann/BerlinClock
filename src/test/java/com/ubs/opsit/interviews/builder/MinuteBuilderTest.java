@@ -1,20 +1,23 @@
-package com.ubs.opsit.interviews.strategy;
+package com.ubs.opsit.interviews.builder;
 
+import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
+import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
+import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 /**
- * MinuteStrategyTest
+ * MinuteBuilderTest
  *
  * @author Hayk Hovhannisyan
  */
-public class MinuteStrategyTest {
+public class MinuteBuilderTest {
 
-    private final UpperSegmentStrategy upperSegmentStrategy = new MinuteStrategy();
-    private final LowerSegmentStrategy lowerSegmentStrategy = new MinuteStrategy();
-    private final FullSegmentStrategy minuteFullStrategy = new MinuteStrategy();
+    private final UpperSegmentStrategy upperSegmentStrategy = new MinuteBuilder();
+    private final LowerSegmentStrategy lowerSegmentStrategy = new MinuteBuilder();
+    private final FullSegmentStrategy minuteFullStrategy = new MinuteBuilder();
 
     @Test
     public void testBuildUpperSegment() throws Exception {

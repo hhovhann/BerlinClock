@@ -1,5 +1,6 @@
-package com.ubs.opsit.interviews.strategy;
+package com.ubs.opsit.interviews.builder;
 
+import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertNotEquals;
  */
 public class SecondsStrategyTest {
 
-    private final FullSegmentStrategy fullSegmentStrategy = new SecondsStrategy();
+    private final FullSegmentStrategy fullSegmentStrategy = new SecondsBuilder();
 
     @Test
     public void testBuildSeconds() throws Exception {

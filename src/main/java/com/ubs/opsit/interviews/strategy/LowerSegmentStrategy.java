@@ -1,7 +1,7 @@
 package com.ubs.opsit.interviews.strategy;
 
 /**
- * FullSegmentStrategy
+ * LowerSegmentStrategy
  *
  * @author Hayk Hovhannisyan
  */

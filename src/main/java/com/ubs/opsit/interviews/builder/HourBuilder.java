@@ -1,13 +1,17 @@
-package com.ubs.opsit.interviews.strategy;
+package com.ubs.opsit.interviews.builder;
+
+import com.ubs.opsit.interviews.strategy.FullSegmentStrategy;
+import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
+import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 
 import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 
 /**
- * FullSegmentStrategy
+ * HourBuilder
  *
  * @author Hayk Hovhannisyan
  */
-public class HourStrategy implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
+public class HourBuilder implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
 
     @Override
     public String buildUpperSegment(String value) {
