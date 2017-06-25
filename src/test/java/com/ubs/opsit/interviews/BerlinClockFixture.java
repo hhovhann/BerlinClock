@@ -1,8 +1,8 @@
 package com.ubs.opsit.interviews;
 
-import com.ubs.opsit.interviews.strategy.HourBuildingStrategy;
-import com.ubs.opsit.interviews.strategy.MinuteBuildingStrategy;
-import com.ubs.opsit.interviews.strategy.SecondsBuildingStrategy;
+import com.ubs.opsit.interviews.strategy.HourStrategy;
+import com.ubs.opsit.interviews.strategy.MinuteStrategy;
+import com.ubs.opsit.interviews.strategy.SecondsStrategy;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import org.junit.Test;
@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * edit this class to complete the exercise, this is your definition of done.
  */
 public class BerlinClockFixture {
-    private TimeConverter berlinClock = new BerlinClock(new SecondsBuildingStrategy(), new MinuteBuildingStrategy(), new HourBuildingStrategy());
+    private TimeConverter berlinClock = new BerlinClock(new SecondsStrategy(), new MinuteStrategy(), new HourStrategy());
     private String theTime;
 
     @Test

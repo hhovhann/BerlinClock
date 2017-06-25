@@ -3,11 +3,11 @@ package com.ubs.opsit.interviews.strategy;
 import static com.ubs.opsit.interviews.utils.NUMBERS.*;
 
 /**
- * TimeBuildingStrategy
+ * FullSegmentStrategy
  *
  * @author Hayk Hovhannisyan
  */
-public class MinuteBuildingStrategy implements TimeBuildingStrategy {
+public class MinuteStrategy implements UpperSegmentStrategy, LowerSegmentStrategy, FullSegmentStrategy {
     @Override
     public String buildUpperSegment(String value) {
         String result = "";

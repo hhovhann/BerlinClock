@@ -4,22 +4,12 @@ import static com.ubs.opsit.interviews.utils.NUMBERS.ZERO;
 import static com.ubs.opsit.interviews.utils.NUMBERS.TWO;
 
 /**
- * TimeBuildingStrategy
+ * FullSegmentStrategy
  *
  * @author Hayk Hovhannisyan
  */
-public class SecondsBuildingStrategy implements TimeBuildingStrategy {
+public class SecondsStrategy implements FullSegmentStrategy {
 
-    @Override
-    public String buildUpperSegment(String value) {
-        return null;
-    }
-
-    @Override
-    public String buildLowerSegment(String value) {
-        return null;
-    }
-    
     @Override
     public String buildFullSegment(String value) {
         int seconds = Integer.valueOf(value);
