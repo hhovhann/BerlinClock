@@ -5,6 +5,7 @@ import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 
 import static com.ubs.opsit.interviews.utils.NUMBERS.*;
+import static org.apache.commons.lang.SystemUtils.LINE_SEPARATOR;
 
 /**
  * MinutesBuilder

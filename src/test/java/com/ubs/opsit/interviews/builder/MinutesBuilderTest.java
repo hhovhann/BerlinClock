@@ -5,6 +5,7 @@ import com.ubs.opsit.interviews.strategy.LowerSegmentStrategy;
 import com.ubs.opsit.interviews.strategy.UpperSegmentStrategy;
 import org.junit.Test;
 
+import static org.apache.commons.lang.SystemUtils.LINE_SEPARATOR;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
@@ -41,11 +42,11 @@ public class MinutesBuilderTest {
 
     @Test
     public void testBuildSegment() throws Exception {
-        assertEquals(minuteFullStrategy.buildFullSegment("59"), "YYRYYRYYRYY" + System.lineSeparator() + "YYYY");
+        assertEquals(minuteFullStrategy.buildFullSegment("59"), "YYRYYRYYRYY" + LINE_SEPARATOR + "YYYY");
     }
 
     @Test
     public void testBuildWrongSegment() throws Exception {
-        assertNotEquals(minuteFullStrategy.buildFullSegment("59"), "YYYYYYYYYYY" + System.lineSeparator() + "YYYY");
+        assertNotEquals(minuteFullStrategy.buildFullSegment("59"), "YYYYYYYYYYY" + LINE_SEPARATOR + "YYYY");
     }
 }
